@@ -1,35 +1,50 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { useState } from "react";
+import "./App.css";
 
-function App() {
-  const [count, setCount] = useState(0)
+function NameList() {
+  const [list, setList] = useState(["Jack", "John", "Mercy"]);
+  const [name, setName] = useState("");
+  
+  function onAddName() {
+    setList([...list, name])
+    setName("")
+  }
+
+  return (
+    <div>
+      <ul>
+        {list.map((name, id) => (
+          <li key={id}>{name}</li>
+        ))}
+      </ul>
+
+      <input type="text" value={name} onChange={(e) => setName(e.target.value)} />
+    <button onClick={onAddName}>Add Name</button>
+    </div>
+  );
+}
+
+function Counter() {
+  const [count, setCount] = useState(10);
+
+  function addOne() {
+    setCount(count + 1);
+  }
 
   return (
     <div className="App">
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://reactjs.org" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <button onClick={addOne}>Count: {count}</button>
     </div>
-  )
+  );
 }
 
-export default App
+function App() {
+  return (
+    <div>
+      <Counter />
+      <NameList />
+    </div>
+  );
+}
+
+export default App;
