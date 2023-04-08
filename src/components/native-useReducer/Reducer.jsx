@@ -44,7 +44,7 @@ const NameList = () => {
           return {
             ...state,
             names: [...state.names, state.name],
-            name: "",
+            name: "", // resetting the input once the name is added
           }; // payload is data being sent to the server(db e.t.c)
           break;
 
