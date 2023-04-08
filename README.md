@@ -28,3 +28,10 @@
 
 - Connected to React Memo - not related
 - Performance killer(from classic memoization) - useMemo is single level memoization
+
+## useCallback
+
+- Used to stabilize reference to a function
+- Used when the callback(onClick etc.) goes onto a nested component as a property
+- Stabilizing references sent to a React component
+- Useful when creating custom hooks
