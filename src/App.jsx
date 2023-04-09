@@ -1,12 +1,13 @@
 import "./App.css";
 
 import React from "react";
-import { State, Reducer, Callback } from "./components";
+import { State, Reducer, Callback, Effect } from "./components";
 
 const App = () => {
   console.log("App rendered")
   return (
     <div>
+      <Effect />
       <State />
       <Reducer />
       <Callback />

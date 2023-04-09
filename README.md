@@ -35,3 +35,8 @@
 - Used when the callback(onClick etc.) goes onto a nested component as a property
 - Stabilizing references sent to a React component
 - Useful when creating custom hooks
+
+## useEffect
+
+- Used a lot to make API requests
+-

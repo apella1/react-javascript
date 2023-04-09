@@ -3,10 +3,10 @@ import { useState } from "react";
 function NameList() {
   const [list, setList] = useState(["Jack", "John", "Mercy"]);
   const [name, setName] = useState("");
-  
+
   function onAddName() {
-    setList([...list, name])
-    setName("")
+    setList([...list, name]);
+    setName("");
   }
 
   return (
@@ -17,8 +17,12 @@ function NameList() {
         ))}
       </ul>
 
-      <input type="text" value={name} onChange={(e) => setName(e.target.value)} />
-    <button onClick={onAddName}>Add Name</button>
+      <input
+        type="text"
+        value={name}
+        onChange={(e) => setName(e.target.value)}
+      />
+      <button onClick={onAddName}>Add Name</button>
     </div>
   );
 }
@@ -39,7 +43,8 @@ function Counter() {
 
 function State() {
   return (
-    <div>      
+    <div>
+      <h2>useState</h2>
       <Counter />
       <NameList />
     </div>
