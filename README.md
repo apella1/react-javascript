@@ -42,3 +42,10 @@
 - What happens when useEffect depends on the data that it writes?
 - Closures with useEffect
 - Callback function given to useEffect can return a clean up function
+
+## useRef
+
+- Changing the value of reference doesn't cause the component to rerender
+- Used to get a reference to an HTML element(primary use)
+- Used to maintain state without doing any updates
+- Uncontrolled inputs in React
