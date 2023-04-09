@@ -39,4 +39,6 @@
 ## useEffect
 
 - Used a lot to make API requests
--
+- What happens when useEffect depends on the data that it writes?
+- Closures with useEffect
+- Callback function given to useEffect can return a clean up function
